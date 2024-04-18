@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "User Dashboard";
+}
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To Online Booking Application</h1>
+    <div class="row">
+        <div class="col-md-3">
+            <a href="@Url.Action("Create", "Guest")" class="btn btn-primary btn-lg btn-block">Create a Guest</a>
+        </div>
+        <div class="col-md-3">
+            <a href="@Url.Action("Index", "Serch")" class="btn btn-primary btn-lg btn-block">Search Flight</a>
+        </div>
+        <div class="col-md-3">
+            <a href="@Url.Action("HotelIndex", "Serch")" class="btn btn-primary btn-lg btn-block">Search Hotel</a>
+        </div>
+        <div class="col-md-3">
+            <a href="@Url.Action("CarIndex", "Serch")" class="btn btn-primary btn-lg btn-block">Search Rental Car</a>
+        </div>
+    </div>
+</div>

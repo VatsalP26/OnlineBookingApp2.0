@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model OnlineBookingApp.Models.Booking.Flight
+
+<h2>Flight Details</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Airline: @Model.Airline</h4>
+        <p class="card-text">Departure Time: @Model.DepartureTime</p>
+        <p class="card-text">Arrival Time: @Model.ArrivalTime</p>
+        <p class="card-text">Price: @Model.Price</p>
+        <a asp-action="Index" class="btn btn-primary">Back to List</a>
+    </div>
+</div>

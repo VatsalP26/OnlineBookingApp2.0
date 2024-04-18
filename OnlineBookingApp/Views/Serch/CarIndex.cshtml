@@ -1,0 +1,16 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<OnlineBookingApp.Models.Booking.CarRental>
+
+<h2>Search Car</h2>
+
+<form asp-controller="CarRental" asp-action="Index" method="get">
+    <div class="form-group">
+        <label>Modal Name</label>
+        <input type="text" class="form-control" name="searchString">
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>

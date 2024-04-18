@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Verify Email";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Verify Email</div>
+                <div class="card-body">
+                    <p>Please click the button below to verify your email address:</p>
+                    <a href="@Url.Action("VerifyEmail", new { userId = ViewBag.UserId, code = ViewBag.Code, verificationCode = ViewBag.VerificationCode })" class="btn btn-primary">Verify Email</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

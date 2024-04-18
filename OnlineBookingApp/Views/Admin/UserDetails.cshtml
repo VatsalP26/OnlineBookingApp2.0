@@ -1,0 +1,15 @@
+﻿@model ApplicationUser
+@using OnlineBookingApp.Data;
+@using OnlineBookingApp.Models;
+
+<h2>User Details</h2>
+
+<dl class="row">
+    <dt class="col-sm-2">User ID:</dt>
+    <dd class="col-sm-10">@Model.Id</dd>
+    <dt class="col-sm-2">Username:</dt>
+    <dd class="col-sm-10">@Model.UserName</dd>
+    <dt class="col-sm-2">Email:</dt>
+    <dd class="col-sm-10">@Model.Email</dd>
+    <a asp-action="AssignRole" class="btn btn-secondary">Back</a>
+</dl>

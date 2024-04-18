@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ApplicationUser>
+@using OnlineBookingApp.Data;
+@using OnlineBookingApp.Models;
+
+<h2 class="mb-4">Assign Role</h2>
+
+<div class="card">
+    <div class="card-body">
+        <form asp-action="AssignRole" method="post">
+            <div class="form-group">
+                <label for="userId">Select User:</label>
+                <select class="form-control" id="userId" name="userId">
+                    @foreach (var user in Model)
+                    {
+                        <option value="@user.Id">@user.UserName</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="roleName">Select Role:</label>
+                <input class="form-control" type="text" id="roleName" name="roleName">
+            </div>
+            <button type="submit" class="btn btn-primary">Assign Role</button>
+        </form>
+    </div>
+</div>

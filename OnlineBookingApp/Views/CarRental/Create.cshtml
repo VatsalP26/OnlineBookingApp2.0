@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model OnlineBookingApp.Models.Booking.CarRental
+
+<h2>Create New Car Rental Booking</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="CarModel" class="control-label">Model</label>
+        <input asp-for="CarModel" class="form-control" />
+        <span asp-validation-for="CarModel" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="RentalCompany" class="control-label">Company</label>
+        <input asp-for="RentalCompany" class="form-control" />
+        <span asp-validation-for="RentalCompany" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price" class="control-label">Price</label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+   
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>

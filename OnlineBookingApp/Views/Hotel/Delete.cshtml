@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model OnlineBookingApp.Models.Booking.Hotel
+
+<h2>Delete Hotel Booking</h2>
+
+<div class="alert alert-danger" role="alert">
+    <p>Are you sure you want to delete this hotel?</p>
+    <p>Name: @Model.Name</p>
+    <p>Location: @Model.Location</p>
+    <p>Price: @Model.Price</p>
+  @*   <p>Rating: @Model.Rating</p> *@
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="HotelId" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
